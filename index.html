@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Tattoo Riffs | Turnos para tatuajes</title>
+  <title>TattooRiffs | Turnos para tatuajes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     body {
@@ -113,7 +113,7 @@
 
   <header>
     <h1>TATTOO RIFFS</h1>
-    <p>Turnos para tatuajes • Arte en piel</p>
+    <p>Turnos para tatuarte • Arte en piel</p>
   </header>
 
   <nav>
@@ -125,7 +125,7 @@
   </nav>
 
   <section id="inicio" class="hero">
-    <h2>Tatuajes con actitud</h2>
+    <h2>Tatuajes con estilo</h2>
     <p>Reservá tu turno de forma fácil y rápida.</p>
     <a class="btn" href="https://wa.me/5490000000000" target="_blank">Reservar por WhatsApp</a>
   </section>
@@ -133,7 +133,8 @@
   <section id="galeria">
     <h2>Trabajos recientes</h2>
     <div class="grid">
-      <div class="card"><img src="https://placehold.co/400x400" /><p>Flash tradicional</p></div>
+      <div class="card"><img src="https://placehold.co/400x400" /><p>cartoon</p></div>
+      <div class="card"><img src="https://placehold.co/400x400" /><p>tradicional</p></div>
       <div class="card"><img src="https://placehold.co/400x400" /><p>Blackwork</p></div>
       <div class="card"><img src="https://placehold.co/400x400" /><p>Lettering</p></div>
     </div>
@@ -142,8 +143,8 @@
   <section id="sobre">
     <h2>Sobre mí</h2>
     <p>
-      Soy tatuador independiente bajo el nombre <strong>Tattoo Riffs</strong>. Trabajo con turnos previos
-      y cada diseño es personalizado. Mi enfoque es la creatividad, el detalle y el respeto por cada cliente.
+    > Soy tatuador independiente bajo el nombre <strong>Tattoo Riffs</strong>. Trabajo con turnos previos y con seña del 15%.
+    > Cada diseño es personalizado. Mi enfoque es la creatividad, el detalle y el respeto por cada cliente.
     </p>
   </section>
 
@@ -151,12 +152,20 @@
     <h2>Solicitar turno</h2>
     <form id="turnoForm">
       <input type="text" id="nombre" placeholder="Nombre" required />
-      <input type="tel" id="telefono" placeholder="WhatsApp" required />
+      <input type="tel" id="telefono" placeholder="numero" required />
       <input type="date" id="fecha" required />
+      <select id="duracion" required>
+      <option value="">duracion del turno</option>
+        <option>30 minutos</option>
+        <option>1 hora</option>
+        <option>3 horas</option>
+        <option>sesion completa</option>
       <select id="estilo" required>
         <option value="">Estilo de tattoo</option>
-        <option>oriental</option>
-        <option>cartoon</option>
+        <option>Oriental</option>
+        <option>Tradicional</option>
+        <option>Lettering</option>
+        <option>Cartoon</option>
         <option>Blackwork</option>
         <option>Otro</option>
       </select>
@@ -168,7 +177,7 @@
   <section id="contacto">
     <h2>Contacto</h2>
     <p>Instagram: @tattooriffs</p>
-    <p>WhatsApp: +54 9 00 0000 0000</p>
+    <p>WhatsApp: +54 9 11 2837 2892</p>
   </section>
 
   <footer>
@@ -184,12 +193,13 @@
       const nombre = document.getElementById('nombre').value;
       const telefono = document.getElementById('telefono').value;
       const fecha = document.getElementById('fecha').value;
+      const duracion = document.getElementById('30min, 1hs, 3hs, sesion completa).value;
       const estilo = document.getElementById('estilo').value;
       const detalle = document.getElementById('detalle').value;
 
       const mensaje = `Hola! Quiero un turno para tatuaje.%0A%0ANombre: ${nombre}%0AWhatsApp: ${telefono}%0AFecha: ${fecha}%0AEstilo: ${estilo}%0AIdea: ${detalle}`;
 
-      const whatsappURL = `https://wa.me/5490000000000?text=${mensaje}`;
+      const whatsappURL = `https://wa.me/5491128372892?text=${mensaje}`;
 
       window.open(whatsappURL, '_blank');
     });
